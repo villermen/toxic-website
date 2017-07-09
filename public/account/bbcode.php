@@ -1,41 +1,30 @@
 <?php
-    include("D:/website/toxic/sjablonen/constanten.php");
+    $title1 = "Toxic - BB-Code";
+    include("../includes/pagestart.php");
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<?php error_reporting(false);
-	include("D:/website/toxic/sjablonen/metadata.txt");
-	?>
-	<title>Toxic - BB-Code</title>
-</head>
-
-<body>
 
 <h1>BB-Code</h1>
 
 <h2>Wat is bb-code?</h2>
 <p>
-Op sommige delen van de site kun je bb-code gebruiken om tekst die je intypt op te maken.<br />
-Je kan bijvoorbeeld een tekst vetgedrukt maken, maar bijvoorbeeld ook zorgen dat er een link van gemaakt word waar je op kan klikken.
+    Op sommige delen van de site kun je bb-code gebruiken om tekst die je intypt op te maken.<br />
+    Je kan bijvoorbeeld een tekst vetgedrukt maken, maar bijvoorbeeld ook zorgen dat er een link van gemaakt word waar je op kan klikken.
 </p>
 
 <h2>Syntax</h2>
 <p>
-Bb-code kun je gebruiken door aan het begin van de op te maken tekst een commando te plaatsen, tussen [ en ].<br />
-Aan het eind van de tekst komt datzelfde commando, maar dan met een / ervoor.<br />
-Voorbeeldje: [b]opgemaakte tekst[/b].<br />
-<br />
-Sommige commando's hebben aan een stuk tekst niet genoeg, voor die commando's werkt het zo:<br />
-[b|parameter]opgemaakte tekst[/b].<br />
-Hierin moet je de parameter vervangen door iets wat die opmaak nodig heeft, zoals bij een link, de url waar de link naartoe moet gaan. 
+    Bb-code kun je gebruiken door aan het begin van de op te maken tekst een commando te plaatsen, tussen [ en ].<br />
+    Aan het eind van de tekst komt datzelfde commando, maar dan met een / ervoor.<br />
+    Voorbeeldje: [b]opgemaakte tekst[/b].<br />
+    <br />
+    Sommige commando's hebben aan een stuk tekst niet genoeg, voor die commando's werkt het zo:<br />
+    [b|parameter]opgemaakte tekst[/b].<br />
+    Hierin moet je de parameter vervangen door iets wat die opmaak nodig heeft, zoals bij een link, de url waar de link naartoe moet gaan.
 </p>
 
 <h2>Commando's</h2>
 <p>
-Hier volgt een lijst met mogelijke commando's en uitleg daarover.
+    Hier volgt een lijst met mogelijke commando's en uitleg daarover.
 </p>
 <table>
 	<tr>
@@ -129,6 +118,4 @@ Hier volgt een lijst met mogelijke commando's en uitleg daarover.
 	<tr><td>Summoning</td></tr>
 </table>
 
-</body>
-
-</html>
+<?php require("../includes/pageend.php"); ?>
