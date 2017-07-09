@@ -1,0 +1,235 @@
+﻿/* standaard */
+
+h1,h2,p,a,td,input,select,textarea,li,form,div
+	{
+	font-family: Palatino Linotype, Book Antiqua, Palatino, Times New Roman, Times, serif;
+	/*font-family:cambria;*/
+	font-size:12pt;
+	}
+
+a
+	{
+	color:#99FF99;
+	text-decoration:none;
+	}
+	
+body
+	{
+	background-color:black;
+	}
+	
+form
+	{
+	color:white;
+	margin-left:50px;
+	}
+	
+h1
+	{
+	font-size:20pt;
+	font-weight:bold;
+	color:lime;
+	}
+	
+h2
+	{
+	margin-left:25px;
+	font-size:14pt;
+	font-weight:bold;
+	color:green;
+	}
+
+input.pass
+	{
+	font-family:Sans-serif;
+	}
+	
+input,select,textarea
+	{
+	background-color:black;
+	color:white;
+	}
+
+li
+	{
+	color:white;
+	margin-left:50px;
+	}
+	
+p
+	{
+	margin-left:50px;
+	color:white;
+	}
+	
+table
+	{
+	margin-left:50px;
+	}
+	
+table.menu,table.accountmenu
+	{
+	margin:3px;
+	margin-left:0px;
+	border-collapse:collapse;
+	border:3px solid #004000;
+	}
+	
+td
+	{
+	padding-left:5px;
+	padding-right:5px;
+	color:#FFFFFF;
+	width:auto;
+	height:auto;
+	border:1px gray solid;
+	text-align:center;
+	white-space:nowrap;
+	}
+	
+td.menu
+	{
+	border-width:0px;
+	text-align:center;
+	background: url('button.png') center;
+
+	cursor:pointer;
+	font-size:14pt;
+	font-weight:bold;
+	color:black;
+	padding:3px 10px;
+   	}
+	
+ul
+	{
+	margin-top:-17px;
+	}
+	
+ul.nested
+	{
+	margin-top:0px;
+	}
+	
+/* account */
+
+a.accountmenu
+	{
+	font-weight:bold;
+	color:green;
+	margin-left:7px;
+	margin-right:7px;
+	}
+
+form.account
+	{
+	margin-left:75px;
+	}
+	
+form.leden_edit,form.events_edit,form.profiel_edit,form.bestandsbeheer
+	{
+	border:1px #696969 solid; 
+	padding:10px;
+	}
+
+p.accountform
+	{
+	margin-left:0;
+	}
+	
+table.leden_edit
+	{
+	float:left;
+	}
+	
+td.accountmenu
+	{
+	border:1px #696969 solid;
+	text-align:center;
+   	}	
+
+td.accountmenu_login
+	{
+	border:1px black solid;
+	text-align:center;
+   	}
+
+td.bbhelp
+	{
+	text-align:left;
+	}	
+	
+img
+	{
+	border-width:0px;
+	}
+	
+/* afbeeldingen */
+
+img.afbeeldingen
+	{
+	margin-left:100px;
+	}
+	
+/* bbcode */
+td.bbcode_doel
+	{
+	height:20px;
+	padding:0;
+	float:left;
+	border-width:1px 0;
+	border-top:none;
+	border-bottom:none;
+	}	
+	
+div.profiel_6
+	{
+	display:inline;
+	font-size:20pt;
+	font-weight:bold;
+	color:lime;
+	}	
+	
+div.profiel_5
+	{
+	display:inline;
+	font-size:14pt;
+	font-weight:bold;
+	color:green;
+	}
+	
+div.profiel_p
+	{
+	display:inline;
+	color:white;
+	}
+	
+table.profiel_table_doel
+	{
+	display:inline;
+	margin-left:0px;
+	}
+	
+/* events */
+
+p.events_nospace
+	{
+	margin-top:-17px;
+	}
+	
+td.events
+	{
+	text-align:left;
+	vertical-align:top;
+	}
+	
+/* leden */
+
+a.leden
+	{
+	font-size:14pt;
+	}
+	
+form.leden
+	{
+	margin-left:150px;
+	}

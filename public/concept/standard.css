@@ -1,0 +1,22 @@
+﻿table.links
+	{
+	margin-left:-16px;
+	margin-top:80px;	
+	}
+	
+td.links
+	{
+	background-image:url('link bg.png');
+	text-align:center;
+	vertical-align:middle;
+	width:113px;
+	height:26px;	
+	}
+	
+a.links
+	{
+	font-size:12pt;
+	font-family:Corbel;
+	text-decoration:none;
+	color:black;
+	}

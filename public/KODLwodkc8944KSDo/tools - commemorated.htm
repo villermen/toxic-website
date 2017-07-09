@@ -1,0 +1,571 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;<br>
+<br>
+&lt;head&gt;<br>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;<br>
+&lt;title&gt;Tool&lt;/title&gt;<br>
+&lt;style&gt;<br>
+#top {<br>
+position: inherit;<br>
+top: 0px;<br>
+width: 100%;<br>
+height: 298px;<br>
+font-family: Tahoma;<br>
+font-size: 11px;<br>
+color: #FFFFFF;<br>
+text-align: center;<br>
+text-decoration: none;<br>
+}<br>
+.style1 {<br>
+border-color: #c0c0c0;<br>
+border-width: 0;<br>
+color: #FFFFFF;<br>
+}<br>
+.lst {<br>
+font-family: Tahoma;<br>
+font-size: 11px;<br>
+margin-bottom: 0.2em;<br>
+vertical-align: bottom;<br>
+height: 11px;<br>
+width: 166px;<br>
+}<br>
+.lst {<br>
+font-family: Tahoma;<br>
+font-size: 11px;<br>
+margin-bottom: 0.2em;<br>
+vertical-align: bottom;<br>
+height: 180px;<br>
+width: 590px;<br>
+}<br>
+input {<br>
+font-family: Tahoma;<br>
+font-size: 11px;<br>
+padding: 4px;<br>
+margin: 1px 1px 1px 0px;<br>
+background-color: #ffffff;<br>
+border: 1px solid #F4F4F4;<br>
+text-decoration: none;<br>
+}<br>
+input {<br>
+font-family: Tahoma;<br>
+font-size: 11px;<br>
+padding: 4px;<br>
+background-color: #ffffff;<br>
+border: 1px solid #F4F4F4;<br>
+text-decoration: none;<br>
+height: 22px;<br>
+width: 53px;<br>
+margin-left: 0px;<br>
+margin-right: 1px;<br>
+margin-top: 1px;<br>
+}<br>
+&lt;/style&gt;<br>
+&lt;script language="JavaScript"&gt;<br>
+<br>
+&lt;!-- Original: Rick Johnson --&gt;<br>
+&lt;!-- Begin<br>
+function a_plus_b(form) {<br>
+a=eval(form.a.value)<br>
+b=eval(form.b.value)<br>
+c=a+b<br>
+form.ans.value = c<br>
+}<br>
+function a_minus_b(form) {<br>
+a=eval(form.a.value)<br>
+b=eval(form.b.value)<br>
+c=a-b<br>
+form.ans.value=c<br>
+}<br>
+function a_times_b(form) {<br>
+a=eval(form.a.value)<br>
+b=eval(form.b.value)<br>
+c=a*b<br>
+form.ans.value=c<br>
+}<br>
+function a_div_b(form) {<br>
+a=eval(form.a.value)<br>
+b=eval(form.b.value)<br>
+c=a/b<br>
+form.ans.value = c<br>
+}<br>
+function a_pow_b(form) {<br>
+a=eval(form.a.value)<br>
+b=eval(form.b.value)<br>
+c=Math.pow(a, b)<br>
+form.ans.value = c<br>
+}<br>
+// End --&gt;<br>
+&lt;/script&gt;<br>
+&lt;base target="_self" /&gt;<br>
+&lt;script type="text/javascript"&gt;<br>
+&lt;!--<br>
+function FP_changeProp() {//v1.0<br>
+var args=arguments,d=document,i,j,id=args[0],o=FP_getObjectByID(id),s,ao,v,x;<br>
+d.$cpe=new Array(); if(o) for(i=2; i&lt;args.length; i+=2) { v=args[i+1]; s="o";
+<br>
+ao=args[i].split("."); for(j=0; j&lt;ao.length; j++) { s+="."+ao[j]; if(null==eval(s)) 
+{ <br>
+s=null; break; } } x=new Object; x.o=o; x.n=new Array(); x.v=new Array();<br>
+x.n[x.n.length]=s; eval("x.v[x.v.length]="+s); d.$cpe[d.$cpe.length]=x;<br>
+if(s) eval(s+"=v"); }<br>
+}<br>
+<br>
+function FP_getObjectByID(id,o) {//v1.0<br>
+var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);<br>
+else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;<br>
+if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)<br>
+for(n=0; n&lt;c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }<br>
+f=o.forms; if(f) for(n=0; n&lt;f.length; n++) { els=f[n].elements;<br>
+for(m=0; m&lt;els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } 
+}<br>
+return null;<br>
+}<br>
+<br>
+function FP_changePropRestore() {//v1.0<br>
+var d=document,x; if(d.$cpe) { for(i=0; i&lt;d.$cpe.length; i++) { x=d.$cpe[i];<br>
+if(x.v=="") x.v=""; eval("x."+x.n+"=String(x.v)"); } d.$cpe=null; }<br>
+}<br>
+<br>
+function FP_openNewWindow(w,h,nav,loc,sts,menu,scroll,resize,name,url) {//v1.0<br>
+var windowProperties=''; if(nav==false) windowProperties+='toolbar=no,'; else<br>
+windowProperties+='toolbar=yes,'; if(loc==false) windowProperties+='location=no,';
+<br>
+else windowProperties+='location=yes,'; if(sts==false) windowProperties+='status=no,';<br>
+else windowProperties+='status=yes,'; if(menu==false) windowProperties+='menubar=no,';<br>
+else windowProperties+='menubar=yes,'; if(scroll==false) windowProperties+='scrollbars=no,';<br>
+else windowProperties+='scrollbars=yes,'; if(resize==false) windowProperties+='resizable=no,';<br>
+else windowProperties+='resizable=yes,'; if(w!="") windowProperties+='width='+w+',';<br>
+if(h!="") windowProperties+='height='+h; if(windowProperties!="") { <br>
+if( windowProperties.charAt(windowProperties.length-1)==',') <br>
+windowProperties=windowProperties.substring(0,windowProperties.length-1); } <br>
+window.open(url,name,windowProperties);<br>
+}<br>
+// --&gt;<br>
+&lt;/script&gt;<br>
+&lt;/head&gt;<br>
+<br>
+&lt;body style="background-image: url('bg.png'); color: #191919; font-weight: 
+700;"&gt;<br>
+<br>
+&lt;div style="margin-left: auto; margin-right: auto; height: 100px; width: 671px; 
+margin-top: 97px; font-family: Tahoma; font-size: 11px; font-weight: 700;"&gt;<br>
+&lt;div id="laag3" style="position: absolute; width: 245px; height: 18px; z-index: 
+3; top: 4px; left: 609px; bottom: 580px;"&gt;<br>
+&lt;table cellpadding="0" cellspacing="0" class="style1"&gt;<br>
+&lt;tr&gt;<br>
+&lt;td style="cursor: pointer; width: 217px;" id="id11" onmouseout="FP_changePropRestore()" 
+onmouseover="FP_changeProp(/*id*/'id11',1,'style.color','#00AEEF')"&gt;<br>
+&lt;script type="text/javascript"&gt; <br>
+var mydate=new Date() ;<br>
+var year=mydate.getFullYear();<br>
+var day=mydate.getDay();<br>
+var daym=mydate.getDate();<br>
+var month=mydate.getMonth();<br>
+var hour=mydate.getHours();<br>
+var minute=mydate.getMinutes();<br>
+if(daym&lt;10)<br>
+daym="0"+daym;<br>
+var dayarray=new Array("Zondag","Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag");<br>
+var montharray=new Array("januari","februari","maart","april","mei","juni","juli","augustus", 
+"september","oktober","november","december");<br>
+document.write(dayarray[day]+" "+daym+" "+montharray[month]+" "+year+" "+hour+":"+minute);<br>
+&lt;/script&gt;<br>
+&amp;nbsp;&lt;/td&gt;<br>
+&lt;td style="cursor: pointer; width: 19px"&gt;<br>
+&lt;img src="icon6.png" width="14" height="16" onclick="FP_changeProp(/*id*/'laag3',0,'style.visibility','hidden')" 
+/&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+&lt;/div&gt;<br>
+&lt;div id="laag2" style="position: absolute; width: 250px; height: 27px; z-index: 
+2; top: 39px; left: 177px"&gt;<br>
+&lt;script language="JavaScript"&gt;<br>
+<br>
+var NS4 = (document.layers); // Which browser?<br>
+var IE4 = (document.all);<br>
+<br>
+var win = window; // window to search.<br>
+var n = 0;<br>
+<br>
+function findInPage(str) {<br>
+<br>
+var txt, i, found;<br>
+<br>
+if (str == "")<br>
+return false;<br>
+<br>
+// Find next occurance of the given string on the page, wrap around to the<br>
+// start of the page if necessary.<br>
+<br>
+if (NS4) {<br>
+<br>
+// Look for match starting at the current point. If not found, rewind<br>
+// back to the first match.<br>
+<br>
+if (!win.find(str))<br>
+while(win.find(str, false, true))<br>
+n++;<br>
+else<br>
+n++;<br>
+<br>
+// If not found in either direction, give message.<br>
+<br>
+if (n == 0)<br>
+alert("Not found.");<br>
+}<br>
+<br>
+if (IE4) {<br>
+txt = win.document.body.createTextRange();<br>
+<br>
+// Find the nth match from the top of the page.<br>
+<br>
+for (i = 0; i &lt;= n &amp;&amp; (found = txt.findText(str)) != false; i++) {<br>
+txt.moveStart("character", 1);<br>
+txt.moveEnd("textedit");<br>
+}<br>
+<br>
+// If found, mark it and scroll it into view.<br>
+<br>
+if (found) {<br>
+txt.moveStart("character", -1);<br>
+txt.findText(str);<br>
+txt.select();<br>
+txt.scrollIntoView();<br>
+n++;<br>
+}<br>
+<br>
+// Otherwise, start over at the top of the page and find first match.<br>
+<br>
+else {<br>
+if (n &gt; 0) {<br>
+n = 0;<br>
+findInPage(str);<br>
+}<br>
+<br>
+// Not found anywhere, give message.<br>
+<br>
+else<br>
+alert("Not found.");<br>
+}<br>
+}<br>
+<br>
+return false;<br>
+}<br>
+&lt;/script&gt;<br>
+<br>
+&lt;form name="search" onSubmit="return findInPage(this.string.value);"&gt;<br>
+&lt;font size=3&gt;<br>
+&lt;input style="border: 1px solid #000000; background-image: url('bg_input.png'); 
+width: 147px; height: 12px; padding-left: 17px; " name="string" type="text" size=15 
+onChange="n = 0;" value="Zoeken" onclick="this.value=''"/&gt;&lt;/font&gt;<br>
+&lt;input style="border: 1px solid #000000; background-color: #FFFFFF; width: 49px; 
+height: 22px;" type="submit" value="Zoeken" /&gt;<br>
+&lt;/form&gt;&lt;/div&gt;<br>
+&lt;img src="logo.png" width="278" height="82" /&gt;&amp;nbsp;<br>
+&lt;br /&gt;<br>
+<br>
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;<br>
+<br>
+function GoToURL(j) {<br>
+window.status=('bezig met laden....')<br>
+<br>
+var URLis;<br>
+URLis = document.URLframe.Dest.value<br>
+<br>
+if (URLis == "" || URLis.length &lt;= 8)<br>
+{ <br>
+j.value = "Probeer opnieuw"<br>
+alert('kan pagina niet vinden');<br>
+window.status=('kan pagina niet vinden')<br>
+} <br>
+else<br>
+{<br>
+j.value = "verbinding maken met: http:\\" + URLis <br>
+var location=("http://" + URLis);<br>
+this.location.href = location;<br>
+window.status=('verbinding maken met ' + URLis + ' even geduld a.u.b........');<br>
+}<br>
+}<br>
+//--&gt;<br>
+<br>
+&lt;/SCRIPT&gt;<br>
+&lt;FORM NAME="URLframe"&gt;<br>
+&lt;TABLE BORDER="0" ALIGN="CENTER"&gt;<br>
+&lt;TR&gt;<br>
+&lt;TD VALIGN="MIDDLE" ALIGN="CENTER" style="width: 561px"&gt;<br>
+&lt;INPUT style="padding-left: 17px; background-image: url('bg_input.png'); width: 
+350px; height: 12px; " NAME="Dest" SIZE="55" MAXLENGTH="50" value="Website 
+adres" onclick="this.value=''" /&gt;&amp;nbsp; <br>
+&lt;INPUT style="width: 127px; height: 22px;"TYPE="button" VALUE="Ga naar web 
+adres" ONCLICK="GoToURL(this)" /&gt;&lt;/TD&gt;&lt;/TR&gt;<br>
+&lt;/TABLE&gt;&lt;/FORM&gt;<br>
+&lt;/div&gt;<br>
+<br>
+&lt;div style="margin-left: auto; margin-right: auto; margin-top: 15px; 
+margin-bottom: 0px; width: 641px; height: 94px; text-align: left;" id="layer4"&gt;<br>
+&lt;div style="margin-bottom: 0px; padding: 2px; width: 667px; height: 71px; 
+border: 1px solid #DBDBDB; border-bottom: 2px solid #DBDBDB; background-color: 
+#FFFFFF;"&gt;<br>
+&lt;div style="margin-bottom: 2px; width: 655px; height: 12px; border: 1px solid 
+#800000; background-color: #A40000; font-family: Tahoma; font-size: 11px; 
+font-weight: 700; padding: 5px; color: #FFFFFF; text-align: left;"&gt;<br>
+Volledig Scherm&lt;/div&gt;<br>
+&lt;div id="lightup" style="height: 41px; font-family: Tahoma;
+font-size: 11px; color: #191919; padding: 2px;"
+onmouseout="FP_changePropRestore()"
+onmouseover="FP_changeProp(/*id*/'lightup',1,'style.padding','1px
+4px','style.border','1px solid
+#E5E5E5','style.backgroundColor','#F9F9F9')"&gt;<br>
+&lt;div style="height: 10px;"&gt;&lt;/div&gt;&lt;table cellpadding="0" cellspacing="0" class="style1" 
+align="center"&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;&lt;img src="alert.png" width="19" height="23" /&gt;&amp;nbsp; &lt;/td&gt;<br>
+&lt;td style="color: #191919"&gt;Klik &lt;a style="cursor: pointer; text-decoration: 
+underline; color: #1416FE" onclick="FP_openNewWindow('1200', '650', false, false, 
+false, false, true, true, 'Tools', /*href*/'index1.php')"&gt;hier&lt;/a&gt; om deze 
+pagina in volledig scherm te openen.&amp;nbsp; &lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+<br>
+<br>
+<br>
+&lt;/div&gt;&lt;/form&gt;<br>
+<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;div id="top"&gt;<br>
+&lt;div style="margin-left: auto; margin-right: auto; margin-bottom: -50px; width: 
+641px; height: 314px; font-weight: 700;"&gt;<br>
+&lt;div style="margin-bottom: 20px; padding: 2px; width: 667px; height: 241px; 
+border: 1px solid #DBDBDB; border-bottom: 2px solid #DBDBDB; background-color: 
+#FFFFFF;" id="layer3"&gt;<br>
+&lt;div id="change1" style="margin-bottom: 2px; width: 655px; height: 12px; border: 
+1px solid #800000; background-color: #A40000; font-family: Tahoma; font-size: 
+11px; font-weight: 700; padding: 5px; color: #FFFFFF; text-align: left;"&gt;<br>
+Stopwatch&lt;/div&gt;<br>
+&lt;div style="height: 253px; font-family: Tahoma; font-size: 11px; color: #191919; 
+padding: 2px;"&gt;<br>
+&lt;br /&gt;<br>
+&lt;div&gt;<br>
+&lt;div&gt;<br>
+&lt;script language="JavaScript"&gt;<br>
+<br>
+&lt;!--<br>
+<br>
+var timercount = 0;<br>
+var timestart = null;<br>
+<br>
+function showtimer() {<br>
+if(timercount) {<br>
+clearTimeout(timercount);<br>
+clockID = 0;<br>
+}<br>
+if(!timestart){<br>
+timestart = new Date();<br>
+}<br>
+var timeend = new Date();<br>
+var timedifference = timeend.getTime() - timestart.getTime();<br>
+timeend.setTime(timedifference);<br>
+var minutes_passed = timeend.getMinutes();<br>
+if(minutes_passed &lt; 10){<br>
+minutes_passed = "0" + minutes_passed;<br>
+}<br>
+var seconds_passed = timeend.getSeconds();<br>
+if(seconds_passed &lt; 10){<br>
+seconds_passed = "0" + seconds_passed;<br>
+}<br>
+document.timeform.timetextarea.value = minutes_passed + ":" + seconds_passed;<br>
+timercount = setTimeout("showtimer()", 1000);<br>
+}<br>
+<br>
+function sw_start(){<br>
+if(!timercount){<br>
+timestart = new Date();<br>
+document.timeform.timetextarea.value = "00:00";<br>
+document.timeform.laptime.value = "";<br>
+timercount = setTimeout("showtimer()", 1000);<br>
+}<br>
+else{<br>
+var timeend = new Date();<br>
+var timedifference = timeend.getTime() - timestart.getTime();<br>
+timeend.setTime(timedifference);<br>
+var minutes_passed = timeend.getMinutes();<br>
+if(minutes_passed &lt; 10){<br>
+minutes_passed = "0" + minutes_passed;<br>
+}<br>
+var seconds_passed = timeend.getSeconds();<br>
+if(seconds_passed &lt; 10){<br>
+seconds_passed = "0" + seconds_passed;<br>
+}<br>
+var milliseconds_passed = timeend.getMilliseconds();<br>
+if(milliseconds_passed &lt; 10){<br>
+milliseconds_passed = "00" + milliseconds_passed;<br>
+}<br>
+else if(milliseconds_passed &lt; 100){<br>
+milliseconds_passed = "0" + milliseconds_passed;<br>
+}<br>
+document.timeform.laptime.value = minutes_passed + ":" + seconds_passed + "." + 
+milliseconds_passed;<br>
+}<br>
+}<br>
+<br>
+function Stop() {<br>
+if(timercount) {<br>
+clearTimeout(timercount);<br>
+timercount = 0;<br>
+var timeend = new Date();<br>
+var timedifference = timeend.getTime() - timestart.getTime();<br>
+timeend.setTime(timedifference);<br>
+var minutes_passed = timeend.getMinutes();<br>
+if(minutes_passed &lt; 10){<br>
+minutes_passed = "0" + minutes_passed;<br>
+}<br>
+var seconds_passed = timeend.getSeconds();<br>
+if(seconds_passed &lt; 10){<br>
+seconds_passed = "0" + seconds_passed;<br>
+}<br>
+var milliseconds_passed = timeend.getMilliseconds();<br>
+if(milliseconds_passed &lt; 10){<br>
+milliseconds_passed = "00" + milliseconds_passed;<br>
+}<br>
+else if(milliseconds_passed &lt; 100){<br>
+milliseconds_passed = "0" + milliseconds_passed;<br>
+}<br>
+document.timeform.timetextarea.value = minutes_passed + ":" + seconds_passed + 
+"." + milliseconds_passed;<br>
+}<br>
+timestart = null;<br>
+}<br>
+<br>
+function Reset() {<br>
+timestart = null;<br>
+document.timeform.timetextarea.value = "00:00";<br>
+document.timeform.laptime.value = "";<br>
+}<br>
+<br>
+//--&gt;<br>
+<br>
+&lt;/script&gt;<br>
+&lt;script type="text/javascript"&gt;<br>
+window.onload=function(){<br>
+//this calls enableIt 5 seconds after the page has loaded<br>
+setTimeout(enableIt,5000)<br>
+}<br>
+function enableIt(){<br>
+document.getElementById('stop').disabled=false;<br>
+}<br>
+&lt;/script&gt;<br>
+<br>
+&lt;form name="timeform" style="margin-bottom: 15px"&gt;<br>
+&amp;nbsp;&lt;input type="text" name="timetextarea" value="00:00" size="10" style="font-size: 
+20px" maxlength="5"&gt; &lt;input style="display: none;" type="text" name="laptime" 
+size="10" style="font-size: 20px"&gt;&lt;br&gt;<br>
+&lt;br&gt;<br>
+&lt;input style="cursor: pointer" type="button" name="start" value="Start" onclick="sw_start();" 
+onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'start',1,'style.backgroundColor','#F9F9F9')" 
+/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; <br>
+&lt;input style="cursor: pointer" type="button" name="stop" value="Stop" onclick="Stop();" 
+onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'stop',1,'style.backgroundColor','#F9F9F9')" 
+/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; <br>
+&lt;input style="cursor: pointer" type="button" name="reset" value="Reset" onclick="Reset();" 
+onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'reset',1,'style.backgroundColor','#F9F9F9')" 
+/&gt;<br>
+&lt;/form&gt;<br>
+&lt;/div&gt;<br>
+&lt;div style="font-weight: 700; height: 129px;"&gt;<br>
+&lt;div&gt;<br>
+&lt;form name="email0" onsubmit="return mailMe( this.form )" style="margin-top: 
+0px"&gt;<br>
+&lt;p style="margin-top: 0px"&gt;&lt;font color="#000000"
+face="Arial"&gt;&lt;b&gt;&lt;textarea name="COMMENTS0" cols="20"
+wrap="virtual" style="width: 587px; height:
+65px"&gt;&lt;/textarea&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;<br>
+&lt;p style="margin-top: 0px"&gt;&lt;font color="#000000" face="Arial"&gt;&lt;b&gt;&lt;input style="cursor: 
+pointer" type="reset" value="Reset" id="id3" onmouseout="FP_changePropRestore()" 
+onmouseover="FP_changeProp(/*id*/'id3',1,'style.backgroundColor','#F9F9F9')" 
+/&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;<br>
+&lt;/form&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;div id="top1"&gt;<br>
+&lt;div style="margin-left: auto; margin-right: auto; margin-top: -35px; 
+margin-bottom: 22px; width: 641px; height: 164px; text-align: left;"&gt;<br>
+&lt;div style="margin-bottom: 15px; padding: 2px; width: 667px; height: 164px; 
+border: 1px solid #DBDBDB; border-bottom: 2px solid #DBDBDB; background-color: 
+#FFFFFF;"&gt;<br>
+&lt;div id="change2" style="margin-bottom: 2px; width: 655px; height: 12px; border: 
+1px solid #800000; background-color: #A40000; font-family: Tahoma; font-size: 
+11px; font-weight: 700; padding: 5px; color: #FFFFFF; text-align: left;"&gt;<br>
+Calculator&lt;/div&gt;<br>
+&lt;div style="height: 123px; font-family: Tahoma; font-size: 11px; color: #191919; 
+padding: 2px;"&gt;<br>
+&lt;br /&gt;<br>
+&lt;center&gt;<br>
+&lt;form name="FrontPage_Form5" onsubmit="return FrontPage_Form5_Validator(this)" 
+language="JavaScript"&gt;<br>
+&lt;input style="height: 13px;" type="text" size="4" name="a" /&gt; &lt;input style="height: 
+13px; type="number" size="4" name="b" /&gt;&lt;br /&gt;<br>
+&lt;br /&gt;<br>
+&lt;input style="cursor: pointer" type="button" value=" + " onclick="a_plus_b(this.form);" 
+id="id5" onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id5',1,'style.backgroundColor','#F9F9F9')" 
+/&gt; &lt;input style="cursor: pointer" type="button" value=" - " onclick="a_minus_b(this.form);" 
+id="id6" onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id6',1,'style.backgroundColor','#F9F9F9')" 
+/&gt; &lt;input style="cursor: pointer" type="button" value=" x " onclick="a_times_b(this.form);" 
+id="id7" onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id7',1,'style.backgroundColor','#F9F9F9')" 
+/&gt; &lt;input style="cursor: pointer" type="button" value=" / " onclick="a_div_b(this.form);" 
+id="id8" onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id8',1,'style.backgroundColor','#F9F9F9')"&gt; 
+&lt;input style="cursor: pointer" type="button" value=" ^ " onclick="a_pow_b(this.form);" 
+id="id9" onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id9',1,'style.backgroundColor','#F9F9F9')" 
+/&gt;&amp;nbsp; &lt;!--webbot bot="Validation" s-data-type="Number" s-number-separators=".," 
+b-value-required="TRUE" i-maximum-length="9" --&gt; &lt;input style="height: 13px; 
+type="" "number" value="" name="ans" size="8" maxlength="9" /&gt;<br>
+&lt;/form&gt;<br>
+&lt;/center&gt;&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;div id="top2"&gt;<br>
+&lt;div style="margin-bottom: 15px; margin: 0px auto; width: 641px; height: 
+275px;"&gt;<br>
+&lt;div style="margin-bottom: 15px; padding: 2px; width: 667px; height: 254px; 
+border: 1px solid #DBDBDB; border-bottom: 2px solid #DBDBDB; background-color: 
+#FFFFFF;"&gt;<br>
+&lt;div id="change3" style="margin-bottom: 2px; width: 655px; height: 12px; border: 
+1px solid #800000; background-color: #A40000; font-family: Tahoma; font-size: 
+11px; font-weight: 700; padding: 5px; color: #FFFFFF; text-align: left;"&gt;<br>
+Notitie&lt;/div&gt;<br>
+&lt;div style="height: 203px; font-family: Tahoma; font-size: 11px; color: #191919; 
+padding: 2px; text-align: center;"&gt;<br>
+&lt;div&gt;<br>
+&lt;form "<br>
+enctype=" text/plain"="" name="email" onsubmit="return mailMe( this.form )"&gt;<br>
+&lt;p style="margin-top: 1px"&gt;&lt;font color="#000000" face="Arial"&gt;&lt;b&gt;&lt;br&gt;<br>
+&lt;textarea name="COMMENTS" rows="8" wrap="virtual" style="width: 587px"&gt;&lt;/textarea&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;<br>
+&lt;p&gt;&lt;font color="#000000" face="Arial"&gt;&lt;b&gt;&lt;br&gt;<br>
+&lt;input style="cursor: pointer" type="reset" value="Reset" id="id4" onmouseout="FP_changePropRestore()" 
+onmouseover="FP_changeProp(/*id*/'id4',1,'style.backgroundColor','#F9F9F9')" 
+/&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;<br>
+&lt;/form&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;div style="margin-top: 0px; cursor: pointer; font-family: Tahoma; font-size: 
+11px; text-align: center; font-weight: 700; color: #C0C0C0" id="layer1" 
+onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'layer1',1,'style.color','#00AEEF')"&gt;<br>
+Stopwatch | Calculator | <br>
+Notitieblok &lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+<br>
+&lt;/body&gt;<br>
+<br>
+&lt;/html&gt;<br>
+</p>
+</body></html>

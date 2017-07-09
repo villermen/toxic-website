@@ -1,0 +1,6 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="author" content="Villermen" />
+<meta name="description" content="RuneScape highscore lookup and compare by Villermen" />
+<meta name="keywords" content="toxic,clan,runescape,t0xic,stat,stats,player,lookup,highscore,hiscore,highscores,hiscores" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" type="image/x-icon" href="/toxic/favicon.ico" />

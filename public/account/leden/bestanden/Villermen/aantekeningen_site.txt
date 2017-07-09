@@ -1,0 +1,20 @@
+[d]login via database veranderen[/d]
+
+[aanpassen]-->[ledenbeheer]:
+toegangscode
+account verwijderen
+account goedkeuren
+
+     
+[leden panel]-->[leden]:
+Verander profiel afbeeldingenmap als gebruiker naam veranderd.
+
+bbcode:
+
+[tabel]                <table>
+{(tekst)               <tr><td>(tekst)
+|(tekst)               </td><td>(tekst)
+}                          </td></tr>
+[/tabel]              </table>
+
+bbcode uitwerken (en uploadformulier maken)

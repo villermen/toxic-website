@@ -1,0 +1,112 @@
+/*PAGE LAYOUT*/	
+
+a
+	{
+	color:#99FF99;
+	text-decoration:none;
+	}
+body
+	{
+	background-color:#111212;
+	color:white;
+	font-family:"cambria","calibri";
+	}
+form
+	{
+	margin-left:50px;
+	}
+h1
+	{
+	font-size:20pt;
+	font-weight:bold;
+	margin-left:5px;
+	color:lime;
+	}
+h2
+	{
+	margin-left:25px;
+	font-size:14pt;
+	font-weight:bold;
+	color:green;
+	}
+input[type="text"]
+	{
+	border:1px solid gray;
+	background-color:black;
+	padding:4px;
+	font-family:Arial,sans-serif;
+	color:white;
+	font-size:12pt;
+	font-weight:bold;
+	}
+p
+	{
+	margin-left:50px;
+	color:white;
+	}
+	
+/*PLAYER INFO TABLE LAYOUT*/
+table#playerInfo
+	{
+	margin-left:50px;
+	border-collapse:collapse;
+	font-family:"cambria","calibri";
+	}
+td.player1
+	{
+	border-width:0px;
+	text-align:left;
+	}
+td.player2
+	{
+	border-width:0px;
+	text-align:right;
+	}
+	
+/*PLAYER LOOKUP TABLE LAYOUT*/
+table#playerStats
+	{
+	margin-left:50px;
+	border-collapse:collapse;
+	font-family:"cambria","calibri";
+	text-align:center;
+	}
+td,th
+	{
+	font-size:12pt;
+	padding:1px 5px;
+	border:1px solid gray;
+	}	
+tr.head
+	{
+	background-color:black;
+	font-size:12pt;
+	color:#C0C0C0;
+	font-weight:bold;
+	}
+td.skill
+	{
+	font-size:12pt;
+	color:#C0C0C0;
+	font-weight:bold;
+	}
+tr.row1
+	{
+	cursor:default;
+	background-color:#2E2E2E;
+	}
+tr.row2
+	{
+	cursor:default;
+	background-color:black;
+	}
+tr.row1:hover,tr.row2:hover
+	{
+	background-color:#404040;
+	}	
+th.spacer,td.spacer
+	{
+	width:10px;
+	border-width:0px;
+	background-color:#111212/*transparent will not work*/;
+	}
