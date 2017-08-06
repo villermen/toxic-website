@@ -49,7 +49,7 @@
                     echo "<img src='{$basePath}includes/friend.png' alt='Vriend' />";
                 }
 
-                echo "<a href='{$basePath}account/profiel.php?naam=" . $naam["naam"] . "'>" . $naam["naam"] . "</a>";
+                echo "<a href='{$basePath}account/leden/profiel.php?naam=" . $naam["naam"] . "'>" . $naam["naam"] . "</a>";
 
                 $statement = $sqlite->prepare("SELECT waar, gemaakt_door, bekeken_door FROM bewerkingen WHERE gemaakt_door=:naam");
                 $statement->bindValue("naam", $naam["naam"]);

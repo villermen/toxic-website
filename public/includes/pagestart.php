@@ -1,4 +1,7 @@
 <?php
+    require_once("bbcodefuncties.php");
+    require_once("highscorefuncties.php");
+
     $sqlite = new SQLite3(__DIR__."/../../database.sqlite3", SQLITE3_OPEN_READONLY);
 
     // Since I created this site with multiple front controllers on an absolute root domain I need to do some magic to find out what the base path is
