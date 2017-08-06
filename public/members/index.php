@@ -79,16 +79,16 @@
                 echo "<tr>";
                 switch ($str) {
                     case "leider":
-                        echo "<td class='leden'><img src='{$baseUrl}members/owner.png' alt='Leider' class='leden' />";
+                        echo "<td class='leden'><img src='{$basePath}members/owner.png' alt='Leider' class='leden' />";
                         break;
                     case "recruut":
-                        echo "<td class='leden'><img src='{$baseUrl}members/recruit.png' alt='Recruut' class='leden' />";
+                        echo "<td class='leden'><img src='{$basePath}members/recruit.png' alt='Recruut' class='leden' />";
                         break;
                     case "generaal":
-                        echo "<td class='leden'><img src='{$baseUrl}members/general.png' alt='Generaal' class='leden' />";
+                        echo "<td class='leden'><img src='{$basePath}members/general.png' alt='Generaal' class='leden' />";
                         break;
                     case "luitenant":
-                        echo "<td class='leden'><img src='{$baseUrl}members/lieutenant.png' alt='Luitenant' class='leden' />";
+                        echo "<td class='leden'><img src='{$basePath}members/lieutenant.png' alt='Luitenant' class='leden' />";
                         break;
                     default:
                         echo "<td class='leden'>" . $naam . "</td>";
@@ -119,12 +119,12 @@
 <?php if ($_LANG != 2): ?>
     <p>
         Scores are stored in a file that can be updated from now on.<br />
-        So whenever you think the list is not up-to-date enough all you have to do is click this link: <a href="<?=$baseUrl?>members/update.php">update</a>
+        So whenever you think the list is not up-to-date enough all you have to do is click this link: <a href="<?=$basePath?>members/update.php">update</a>
     </p>
 <?php else: ?>
     <p>
         De scores worden vanaf nu opgeslagen in een bestand dat via een link geupdate kan worden.<br />
-        Dus als je het niet up-to-date genoeg vind hoef je alleen maar op deze link te klikken: <a href="<?=$baseUrl?>members/update.php">update</a>
+        Dus als je het niet up-to-date genoeg vind hoef je alleen maar op deze link te klikken: <a href="<?=$basePath?>members/update.php">update</a>
     </p>
 <?php endif; ?>
 

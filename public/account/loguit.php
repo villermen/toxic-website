@@ -3,9 +3,11 @@
     require("../includes/pagestart.php");
 
     if ($login) {
-        // mysql_query("update leden set login_id='NULL' where login_id='" . $_COOKIE["id"] . "'");
+        $statement = $sqlite->prepare("UPDATE leden SET login_id=NULL WHERE login_id=:login_id");
+        $statement->bindValue("login_id", $_COOKIE["id"]);
+        $statement->execute();
 
-        setcookie("id","",time()-1, $baseUrl);
+        setcookie("id","",time()-1, $basePath);
 
         $bericht="<p>Je bent nu uitgelogd.</p>";
     } else {
@@ -17,6 +19,6 @@
 
 <?=$bericht?>
 
-<p>Klik <a href='<?=$baseUrl?>account/'>hier</a> om weer terug te gaan naar het panel</p>
+<p>Klik <a href='<?=$basePath?>account/'>hier</a> om weer terug te gaan naar het panel</p>
 
 <?php require("../includes/pageend.php"); ?>

@@ -36,13 +36,13 @@
     <p>
         The ranksystem in the CC (clanchat):<br />
         <br />
-        <img src='<?=$baseUrl?>includes/friend.png' alt='Friend' /> -  Recruit, an official member.<br />
-        <img src='<?=$baseUrl?>includes/recruit.png' alt='Recruit' /> - A regularly active member.<br />
-        <img src='<?=$baseUrl?>includes/corporal.png' alt='Corporal' /> - An active member that have played a lot of events with us.<br />
-        <img src='<?=$baseUrl?>includes/sergeant.png' alt='Sergeant' /> - An excellent member, a member that have proven to be responsible enough to earn the right to kick.<br />
-        <img src='<?=$baseUrl?>includes/lieutenant.png' alt='Lieutenant' /> - A member that can also lead events.<br />
-        <img src='<?=$baseUrl?>includes/captain.png' alt='Captain' /> - A member that can discuss changes for the clansystem, and all the above mentioned.<br />
-        <img src='<?=$baseUrl?>includes/general.png' alt='General' /> - A leader.<br />
+        <img src='<?=$basePath?>includes/friend.png' alt='Friend' /> -  Recruit, an official member.<br />
+        <img src='<?=$basePath?>includes/recruit.png' alt='Recruit' /> - A regularly active member.<br />
+        <img src='<?=$basePath?>includes/corporal.png' alt='Corporal' /> - An active member that have played a lot of events with us.<br />
+        <img src='<?=$basePath?>includes/sergeant.png' alt='Sergeant' /> - An excellent member, a member that have proven to be responsible enough to earn the right to kick.<br />
+        <img src='<?=$basePath?>includes/lieutenant.png' alt='Lieutenant' /> - A member that can also lead events.<br />
+        <img src='<?=$basePath?>includes/captain.png' alt='Captain' /> - A member that can discuss changes for the clansystem, and all the above mentioned.<br />
+        <img src='<?=$basePath?>includes/general.png' alt='General' /> - A leader.<br />
         <br />
         There were lots of people asking for higher ranks.<br />
         We have created a rule that if you nag about getting a higher rank, your rank will be lowered.<br />
@@ -79,13 +79,13 @@
     <p>
         Het rankingsysteem voor in de CC (clanchat):<br />
         <br />
-        <img src='<?=$baseUrl?>includes/friend.png' alt='Friend' /> -  Rekruut, een offici�el lid van de clan.<br />
-        <img src='<?=$baseUrl?>includes/recruit.png' alt='Recruit' /> - Een regelmatig actief lid.<br />
-        <img src='<?=$baseUrl?>includes/corporal.png' alt='Corporal' /> - Een actief, behulpzaam lid die met events mee doet van tijd tot tijd.<br />
-        <img src='<?=$baseUrl?>includes/sergeant.png' alt='Sergeant' /> - Een uitmuntend lid, een lid die bewezen heeft verantwoordelijk genoeg te zijn om het recht te hebben mensen te kicken.<br />
-        <img src='<?=$baseUrl?>includes/lieutenant.png' alt='Lieutenant' /> - Een lid die het vermogen heeft om events te leiden.<br />
-        <img src='<?=$baseUrl?>includes/captain.png' alt='Captain' /> - Een lid die beslissingen kan voorstellen, en al het hierboven genoemde.<br />
-        <img src='<?=$baseUrl?>includes/general.png' alt='General' /> - Een leider.<br />
+        <img src='<?=$basePath?>includes/friend.png' alt='Friend' /> -  Rekruut, een offici�el lid van de clan.<br />
+        <img src='<?=$basePath?>includes/recruit.png' alt='Recruit' /> - Een regelmatig actief lid.<br />
+        <img src='<?=$basePath?>includes/corporal.png' alt='Corporal' /> - Een actief, behulpzaam lid die met events mee doet van tijd tot tijd.<br />
+        <img src='<?=$basePath?>includes/sergeant.png' alt='Sergeant' /> - Een uitmuntend lid, een lid die bewezen heeft verantwoordelijk genoeg te zijn om het recht te hebben mensen te kicken.<br />
+        <img src='<?=$basePath?>includes/lieutenant.png' alt='Lieutenant' /> - Een lid die het vermogen heeft om events te leiden.<br />
+        <img src='<?=$basePath?>includes/captain.png' alt='Captain' /> - Een lid die beslissingen kan voorstellen, en al het hierboven genoemde.<br />
+        <img src='<?=$basePath?>includes/general.png' alt='General' /> - Een leider.<br />
         <br />
         Er werd veel gezeurd om hogere ranks in de clan.<br />
         We hebben nu de regel dat als je zeurt om een hogere rank, je juist een lagere zult krijgen.<br />

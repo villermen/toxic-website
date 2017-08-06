@@ -12,13 +12,13 @@
     </p>
 
     <h2>Previous homepage picture</h2>
-    <img src='<?=$baseUrl?>gallery/team.png' alt='Teampicture' style='margin-left:100px'/>
+    <img src='<?=$basePath?>gallery/team.png' alt='Teampicture' style='margin-left:100px'/>
 
     <h2>Toxic on fire!</h2>
-    <img src='<?=$baseUrl?>gallery/toxiconfire.png' alt='Toxic on Fire!' style='margin-left:100px'/>
+    <img src='<?=$basePath?>gallery/toxiconfire.png' alt='Toxic on Fire!' style='margin-left:100px'/>
 
     <p>Arcane Rays en Villermen do the questcape emote together</p>
-    <img src="<?=$baseUrl?>gallery/questcape2.gif" alt="Werwar666 en Villermen questcape emote" style="margin-left:100px"/>
+    <img src="<?=$basePath?>gallery/questcape2.gif" alt="Werwar666 en Villermen questcape emote" style="margin-left:100px"/>
 <?php else: ?>
     <h1>Afbeeldingen</h1>
 
@@ -27,13 +27,13 @@
     </p>
 
     <h2>Vorige homepage foto</h2>
-    <img src='<?=$baseUrl?>gallery/team.png' alt='Teamfoto' style='margin-left:100px'/>
+    <img src='<?=$basePath?>gallery/team.png' alt='Teamfoto' style='margin-left:100px'/>
 
     <h2>Toxic on fire!</h2>
-    <img src='<?=$baseUrl?>gallery/toxiconfire.png' alt='Toxic on Fire!' style='margin-left:100px'/>
+    <img src='<?=$basePath?>gallery/toxiconfire.png' alt='Toxic on Fire!' style='margin-left:100px'/>
 
     <p>Arcane Rays en Villermen doen samen de questcape emote</p>
-    <img src="<?=$baseUrl?>gallery/questcape2.gif" alt="Werwar666 en Villermen questcape emote" style="margin-left:100px"/>
+    <img src="<?=$basePath?>gallery/questcape2.gif" alt="Werwar666 en Villermen questcape emote" style="margin-left:100px"/>
 <?php endif; ?>
 
 <?php require("../includes/pageend.php"); ?>

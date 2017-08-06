@@ -31,6 +31,6 @@
     </p>
 <?php endif; ?>
 
-<img src="<?=$baseUrl?>dungeoneering_team2.png" alt="Toxic!" />
+<img src="<?=$basePath?>dungeoneering_team2.png" alt="Toxic!" />
 
 <?php require("includes/pageend.php"); ?>

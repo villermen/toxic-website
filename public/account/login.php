@@ -2,7 +2,7 @@
     $title1 = "Toxic - Inloggen";
     require("../includes/pagestart.php");
 
-    if (!isset($_POST["naam"]) || !isset($_POST["wachtwoord"])) {
+    if (!isset($_POST["naam"], $_POST["wachtwoord"])) {
         $bericht = "<p>Je hoeft nu niet op deze pagina te zijn...</p>";
     } else {
         $naam = ucwords(strtolower(trim($_POST["naam"])));
@@ -17,13 +17,19 @@
 
             if ($array_naam) {
                 if ($array_naam["wachtwoord"] == $wachtwoord || true) {
-                    //login verwerken
+                    // Login verwerken
 
-                    // $id = uniqid();
+                    // Comments starting at line denote lines changed for archived version
+//                     $id = uniqid();
                     $id = $array_naam["login_id"];
 
-                    // mysql_query("UPDATE leden SET login_id='" . $id . "' WHERE naam='" . $array_naam["naam"] . "'");
-                    setcookie("id", $id, time() + 60 * 60 * 24 * 365, $baseUrl);
+                    $statement = $sqlite->prepare("UPDATE leden SET login_id=:login_id WHERE naam=:naam");
+                    $statement->bindValue("login_id", $id);
+                    $statement->bindValue("naam", $array_naam["naam"]);
+                    $statement->execute();
+
+                    setcookie("id", $id, time() + 60 * 60 * 24 * 365, $basePath);
+
                     $bericht = "<p>Je bent nu ingelogd als " . $array_naam["naam"] . ".</p>";
 
                 } else {
@@ -42,6 +48,6 @@
 
 <?=$bericht?>
 
-<p>Klik <a href='<?=$baseUrl?>account/'>hier</a> om weer terug te gaan naar het panel</p>
+<p>Klik <a href='<?=$basePath?>account/'>hier</a> om weer terug te gaan naar het panel</p>
 
 <?php require("../includes/pageend.php"); ?>

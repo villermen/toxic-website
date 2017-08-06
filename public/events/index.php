@@ -101,7 +101,7 @@ require("../includes/pagestart.php");
     <br />
     Het is de bedoeling dat er 1 leider is die iedereen orders geeft.<br />
     Als de andere zijn orders niet goed opvolgen gaat het snel mis.<br />
-    Lootshare moet bij iedereen aanstaan.<img alt="Bandos Avatar" src="<?=$baseUrl?>events/bandos_avatar.png" style="float:right"/><br />
+    Lootshare moet bij iedereen aanstaan.<img alt="Bandos Avatar" src="<?=$basePath?>events/bandos_avatar.png" style="float:right"/><br />
     <br />
     Requirements:<br />
 </p>
@@ -169,7 +169,7 @@ require("../includes/pagestart.php");
 </p>
 
 <h2>
-    <a name="pktrip"></a>PK-trip<img alt="PK-Skull" src="<?=$baseUrl?>events/skull.png" style="float:right"/>
+    <a name="pktrip"></a>PK-trip<img alt="PK-Skull" src="<?=$basePath?>events/skull.png" style="float:right"/>
 </h2>
 <p class="events_nospace">
     We gaan met zoveel mogelijk mensen de wildy in op zoek naar slachtoffers.<br />
@@ -194,7 +194,7 @@ require("../includes/pagestart.php");
 <h2>
     <a name="steelwars"></a>Steel Wars
 </h2>
-<p class="events_nospace"><img alt="Full Steel" src="<?=$baseUrl?>events/fullsteel.png" style="float:right"/>
+<p class="events_nospace"><img alt="Full Steel" src="<?=$basePath?>events/fullsteel.png" style="float:right"/>
     De clan word opgedeeld in groepen.<br />
     Iedereen draagt full steel met een van tevoren vastgesteld wapen.<br />
     De verschillende teams krijgen team-capes.<br />

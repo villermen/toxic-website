@@ -9,14 +9,14 @@
 
 <p>
     <?php if (isset($_GET["login"])): ?>
-        <a href='<?=$baseUrl?>account/'>Log in &#60;verberg&#62;</a>
+        <a href='<?=$basePath?>account/'>Log in &#60;verberg&#62;</a>
     <?php else: ?>
-        <a href='<?=$baseUrl?>account/?login'>Log in</a>
+        <a href='<?=$basePath?>account/?login'>Log in</a>
     <?php endif; ?>
 </p>
 
 <?php if (isset($_GET["login"])): ?>
-    <form class='account' method='post' action='<?=$baseUrl?>account/login.php'>
+    <form class='account' method='post' action='<?=$basePath?>account/login.php'>
         Je gebruikersnaam:<br />
         <input type='text' name='naam' maxlength='12' size='12' /><br />
         <br />
@@ -27,14 +27,14 @@
 
 <p>
     <?php if (isset($_GET["nieuw"])): ?>
-        <a href='<?=$baseUrl?>account/'>Maak een account aan &#60;verberg&#62;</a><br />
+        <a href='<?=$basePath?>account/'>Maak een account aan &#60;verberg&#62;</a><br />
     <?php else: ?>
-        <a href='<?=$baseUrl?>account/?nieuw'>Maak een account aan</a><br />
+        <a href='<?=$basePath?>account/?nieuw'>Maak een account aan</a><br />
     <?php endif; ?>
 </p>
 
 <?php if (isset($_GET["nieuw"])): ?>
-    <form class='account' method='post' action='<?=$baseUrl?>account/nieuw.php'>
+    <form class='account' method='post' action='<?=$basePath?>account/nieuw.php'>
         Je gebruikersnaam: (maximaal 12 tekens)<br />
         <input type='text' name='naam' maxlength='12' size='12' /><br />
         <br />
@@ -48,14 +48,14 @@
 
 <p>
     <?php if (isset($_GET["verander_naam"])): ?>
-        <a href='<?=$baseUrl?>account/'>Verander je gebruikersnaam &lt;verberg&gt;</a>
+        <a href='<?=$basePath?>account/'>Verander je gebruikersnaam &lt;verberg&gt;</a>
     <?php else: ?>
-        <a href='<?=$baseUrl?>account/?verander_naam'>Verander je gebruikersnaam</a>
+        <a href='<?=$basePath?>account/?verander_naam'>Verander je gebruikersnaam</a>
     <?php endif; ?>
 </p>
 
 <?php if (isset($_GET["verander_naam"])): ?>
-    <form class='account' method='post' action='<?=$baseUrl?>account/verander_naam.php'>
+    <form class='account' method='post' action='<?=$basePath?>account/verander_naam.php'>
         Nieuwe naam:<br />
         <input type='text' name='naam' maxlength='12' size='12' /><br />
         <br />

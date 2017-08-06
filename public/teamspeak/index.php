@@ -5,7 +5,7 @@
 
 <h1>TeamSpeak</h1>
 
-<img src="<?=$baseUrl?>teamspeak/logo.png" alt="teamspeak logo" />
+<img src="<?=$basePath?>teamspeak/logo.png" alt="teamspeak logo" />
 
 <?php if ($_LANG != 2): ?>
     <p>
