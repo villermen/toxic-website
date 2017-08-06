@@ -161,7 +161,7 @@ function bbDecode($string, $naam)
         if (stripos($array_tag["content"], "/") !== false) {
             $string = substr_replace($string, "<img alt='' src='" . $array_tag["content"] . "' />", $array_tag["position"], $array_tag["length"]);
         } else {
-            $string = substr_replace($string, "<img alt='' src='/toxic/account/leden/bestanden/" . str_replace(" ", "_", $naam) . "/" . $array_tag["content"] . "' />", $array_tag["position"], $array_tag["length"]);
+            $string = substr_replace($string, "<img alt='' src='bestanden/" . str_replace(" ", "_", $naam) . "/" . $array_tag["content"] . "' />", $array_tag["position"], $array_tag["length"]);
         }
     }
 

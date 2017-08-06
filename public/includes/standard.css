@@ -161,6 +161,7 @@ td.bbhelp
 img
 	{
 	border-width:0px;
+    max-width: 100%;
 	}
 	
 /* afbeeldingen */
