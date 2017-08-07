@@ -1,24 +1,6 @@
-<?php error_reporting(false);
-include("D:/website/toxic/sjablonen/constanten.php");
-include("D:/website/toxic/sjablonen/bbcodefuncties.php");
-include("D:/website/toxic/sjablonen/highscorefuncties.php");
-?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<?php error_reporting(false);
-	include("D:/website/toxic/sjablonen/metadata.txt");
-	?>
-	<title>Toxic - Profiel Aanpassen</title>
-</head>
-
-<body>
-
-<?php error_reporting(false);
-include("D:/website/toxic/sjablonen/menu.php");
-include("D:/website/toxic/sjablonen/accountmenu.php");
+<?php
+    $title1 = "Toxic - Profiel Aanpassen";
+    require("../../includes/pagestart.php");
 ?>
 
 <h1>Profiel Aanpassen</h1>
@@ -75,7 +57,7 @@ else
 				mysql_query("insert into bewerkingen (waar,gemaakt_door,bekeken_door,wat) values ('profiel','" . INLOGNAAM . "','" . INLOGNAAM . "','FALSE')");
 				}
 				
-			echo "<p>Je profiel is geüpdate.</p>";
+			echo "<p>Je profiel is geÃ¼pdate.</p>";
 			}
 			
 		if ($_POST["actie"]=="Voorbeeld")
