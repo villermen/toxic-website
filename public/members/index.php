@@ -79,16 +79,16 @@
                 echo "<tr>";
                 switch ($str) {
                     case "leider":
-                        echo "<td class='leden'><img src='{$basePath}members/owner.png' alt='Leider' class='leden' />";
+                        echo "<td class='leden'><img src='{$basePath}includes/owner.png' alt='Leider' class='leden' />";
                         break;
                     case "recruut":
-                        echo "<td class='leden'><img src='{$basePath}members/recruit.png' alt='Recruut' class='leden' />";
+                        echo "<td class='leden'><img src='{$basePath}includes/recruit.png' alt='Recruut' class='leden' />";
                         break;
                     case "generaal":
-                        echo "<td class='leden'><img src='{$basePath}members/general.png' alt='Generaal' class='leden' />";
+                        echo "<td class='leden'><img src='{$basePath}includes/general.png' alt='Generaal' class='leden' />";
                         break;
                     case "luitenant":
-                        echo "<td class='leden'><img src='{$basePath}members/lieutenant.png' alt='Luitenant' class='leden' />";
+                        echo "<td class='leden'><img src='{$basePath}includes/lieutenant.png' alt='Luitenant' class='leden' />";
                         break;
                     default:
                         echo "<td class='leden'>" . $naam . "</td>";
