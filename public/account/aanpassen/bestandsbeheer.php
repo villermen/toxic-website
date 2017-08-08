@@ -6,7 +6,7 @@
 
     if ($permission) {
         $urlnaam = str_ireplace(" ",  "_", $login["naam"]);
-        $array_bestanden = glob($baseDirectory . "account/leden/bestanden/$urlnaam/*.{png,jpeg,jpg,jpe,gif,mp3,wav,ogg,wma,doc,docx,txt,xls,xlsx,ppt,pptx}", GLOB_BRACE);
+        $array_bestanden = glob($baseDirectory . "account/leden/bestanden/$urlnaam/*.*");
         $array_bestanden = array_map("basename", $array_bestanden);
     }
 ?>
