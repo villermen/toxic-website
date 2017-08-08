@@ -1,4 +1,7 @@
 <?php
+
+exit("I don't work no more.");
+
 function getgeprice($id) 
 	{
     $url = "http://itemdb-rs.runescape.com/viewitem.ws?obj=".$id;

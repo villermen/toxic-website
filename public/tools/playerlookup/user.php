@@ -1,5 +1,7 @@
 <?php
 
+exit("I don't work no more.");
+
 if (!include("../../sjablonen/highscorefuncties.php"))
 	die("Statprocessfunctions could not be loaded, execution failed. (user.php line 4)");
 	

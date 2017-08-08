@@ -1,5 +1,7 @@
 <?php error_reporting(false);
 
+exit("I don't work no more.");
+
 if (!include("../../includes/statfunctions.php"))
 	die("Gegevensverwerkingsfuncties konden niet worden geladen. (compare.php regel 4)");
 	

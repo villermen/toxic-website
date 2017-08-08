@@ -1,4 +1,7 @@
 <?php
+
+exit("I don't work no more.");
+
 include("../../sjablonen/constanten.php");
 
 function getgeprice($id) 

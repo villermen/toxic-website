@@ -1,4 +1,7 @@
 <?php
+
+exit("I don't work no more.");
+
 //requested name
 if (isset($_GET["name"]) && ($_GET["name"]!=""))
 	{
