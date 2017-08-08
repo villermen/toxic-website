@@ -13,12 +13,6 @@
         {
             if ($_POST["actie"] === "Verander Profiel")
             {
-                $titel = htmlEncode($_POST["titel"]);
-
-                $muziek = $_POST["muziek"];
-
-                $inhoud = htmlEncode($_POST["inhoud"]);
-
                 $views = (isset($_POST["views"]) ? "aan" : "uit") . (int)substr($login["views"], 3);
 
                 $statement = $sqlite->prepare("UPDATE leden SET 
@@ -26,9 +20,9 @@
                     profielinhoudtekst=:profielinhoudtekst, views=:views
                     WHERE naam=:naam
                 ");
-                $statement->bindValue("profielmuziek", $muziek);
-                $statement->bindValue("profieltiteltekst", $titel);
-                $statement->bindValue("profielinhoudtekst", $inhoud);
+                $statement->bindValue("profielmuziek", $_POST["muziek"]);
+                $statement->bindValue("profieltiteltekst", $_POST["titel"]);
+                $statement->bindValue("profielinhoudtekst", $_POST["inhoud"]);
                 $statement->bindValue("views", $views);
                 $statement->bindValue("naam", $login["naam"]);
                 $statement->execute();

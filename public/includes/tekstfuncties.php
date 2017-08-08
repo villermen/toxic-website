@@ -2,16 +2,6 @@
 
 require_once("highscorefuncties.php");
 
-
-function profielPagina()
-{
-    ob_start();
-
-
-
-    return ob_get_clean();
-}
-
 /**
  * @param string $string
  * @param bool $lineBreaks
