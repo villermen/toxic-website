@@ -1,28 +1,22 @@
 <?php
-$title1 = "Toxic - Events";
-$title2 = "Toxic - Evenementen";
-require("../includes/pagestart.php");
+    $title1 = "Toxic - Events";
+    $title2 = "Toxic - Evenementen";
+    require("../includes/pagestart.php");
+
+    $eventPlanner = $sqlite->query("SELECT * FROM bewerkingen WHERE waar='eventplanner'")->fetchArray(SQLITE3_ASSOC);
 ?>
 
-<?php if ($_LANG != 2): ?>
-    <h1>Upcoming events</h1>
-    <h2>ZGWD - Friday 6 August, 18:30 GMT</h2>
-    <p>
-        Get your killcount for Zamorak godwarsdungeon at the above mentioned time, we are going to use COINSHARE for this trip.
-    </p>
+<h1>Geplande evenementen</h1>
 
+<?=bbDecode($eventPlanner["wat"], $eventPlanner["gemaakt_door"]);?>
+
+<?php if ($_LANG != 2): ?>
     <h1>Eventinfo</h1>
     <p>
         Suggestions for events can always be made by everyone, we'll discuss it in the clanchat. New ideas are always welcome.<br />
         If you have your own clan and want to battle us in any minigame, feel free to join our clanchat and ask us.<br />
     </p>
 <?php else: ?>
-    <h1>Geplande evenementen</h1>
-    <h2>ZGWD - Vrijdag 6 Augustus om 19:30</h2>
-    <p>
-        Haal je killcount voor Zamorak godwarsdungeon op bovenstaande tijd, we gaan deze trip COINSHARE gebruiken.
-    </p>
-
     <h1>Evenementinfo</h1>
     <p>
         Suggesties voor events kunnen altijd en door iedereen gemaakt worden, die bespreken we dan in de clanchat. Nieuwe ideeën voor events zijn altijd welkom.<br />
@@ -30,7 +24,7 @@ require("../includes/pagestart.php");
     </p>
 <?php endif; ?>
 
-<h1>Verschillende events <?php if ($_LANG != 2): ?>(Dutch only)<?php endif; ?></h1>
+<h1>Verschillende events</h1>
 
 <h2>
     <a name="99party"></a>99-Party

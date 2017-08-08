@@ -1,64 +1,52 @@
-<?php error_reporting(false);
-include("D:/website/toxic/sjablonen/constanten.php");
-include("D:/website/toxic/sjablonen/bbcodefuncties.php");
-?>
+<?php
+    $title = "Toxic - Eventplanner Aanpassen";
+    require("../../includes/pagestart.php");
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+    $permission = false;
+    if ($login && stripos($login["privileges"], "E") !== false) {
+        $permission = true;
 
-<head>
-	<?php error_reporting(false);
-	include("D:/website/toxic/sjablonen/metadata.txt");
-	?>
-	<title>Toxic - Eventplanner Aanpassen</title>
-</head>
+        $eventPlanner = $sqlite->query("SELECT * FROM bewerkingen WHERE waar='eventplanner'")->fetchArray(SQLITE3_ASSOC);
 
-<body>
+        if (!$eventPlanner) {
+            $eventPlanner = ["wat" => ""];
+        }
 
-<?php error_reporting(false);
-include("D:/website/toxic/sjablonen/menu.php");
-include("D:/website/toxic/sjablonen/accountmenu.php");
+        $geupdate = false;
+        if (isset($_POST["inhoud"])) {
+            $eventPlanner["wat"] = $_POST["inhoud"];
+
+            $sqlite->query("DELETE FROM bewerkingen WHERE waar='eventplanner'");
+            $statement = $sqlite->prepare("
+                INSERT INTO bewerkingen 
+                (waar, gemaakt_door, wat, bekeken_door) VALUES
+                ('eventplanner', :gemaakt_door, :wat, :gemaakt_door)
+            ");
+            $statement->bindValue("gemaakt_door", $login["naam"]);
+            $statement->bindValue("wat", $eventPlanner["wat"]);
+            $statement->execute();
+
+            $geupdate = true;
+        }
+    }
 ?>
 
 <h1>Eventplanner Aanpassen</h1>
 
-<?php error_reporting(false);
+<?php if ($permission): ?>
+    <?php if ($geupdate): ?>
+        <p>De eventplanner is geupdate.</p>
+    <?php endif; ?>
 
-//bevoegdheidscheck
-if (INLOGRANKERROR!=false)
-	echo INLOGRANKERROR;
-elseif (substr_count(INLOGRANK,"E")==0)
-	{
-	echo "<p>Je hebt niet de bevoegdheid om de eventplanner te bewerken.</p>
-		  <p>Klik <a href='/account'>hier</a> om terug te gaan naar het panel</p>";
-	}
-else
-	{
-	//updaten
-	if (isset($_POST["inhoud"]))
-		{
-		$inhoud=htmlEncode($_POST["inhoud"]);
-		mysql_query("delete from bewerkingen where waar='eventplanner'");
-		mysql_query("insert into bewerkingen (waar,gemaakt_door,wat,bekeken_door) values ('eventplanner','" . INLOGNAAM . "','" . $inhoud . "','" . INLOGNAAM . "')");
-		
-		echo "<p>De eventplanner is geupdate.</p>";
-		}
-	
-	//UI
-	$inhoud=mysql_fetch_array(mysql_query("select wat from bewerkingen where waar='eventplanner'"));
-	$inhoud=str_replace("<br />","\r\n",$inhoud["wat"]);
-	
-	echo "
-	<form class='events_edit' method='post' action='events_edit.php'>
-		Inhoud:<br />
-		<textarea style='width:100%' rows='20' cols='100' name='inhoud'>" . $inhoud . "</textarea><br />
-		<br />
-		<input type='submit' value='Verander Eventplanner' />
-	</form>";
-	
-	}
-?>
+    <form class="events_edit" method="post" action="events_edit.php">
+        Inhoud:<br />
+        <textarea style="width:100%" rows="20" cols="100" name="inhoud"><?=$eventPlanner["wat"];?></textarea><br />
+        <br />
+        <input type="submit" value="Verander Eventplanner" />
+    </form>
+<?php else: ?>
+    <p>Je hebt niet de bevoegdheid om de eventplanner te bewerken.</p>
+    <p>Klik <a href="<?=$basePath;?>account">hier</a> om terug te gaan naar het panel</p>
+<?php endif; ?>
 
-</body>
-
-</html>
+<?php require("../../includes/pageend.php"); ?>
