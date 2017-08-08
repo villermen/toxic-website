@@ -1,5 +1,7 @@
 # Toxic website
 
 Archived website for my RuneScape clan "Toxic" from December 2009.
-The database is from an older period and has been converted to a read-only SQLite database.
-The site has been made more accessible for public use.
+
+The database has been converted to a read-only SQLite database.
+The files are from a later period of which I have no database backups.
+The site has been made working and more accessible for GitHub.
