@@ -5,9 +5,21 @@
     $sqlite = new SQLite3(__DIR__."/../../database.sqlite3", SQLITE3_OPEN_READONLY);
 
     // Since I created this site with multiple front controllers on an absolute root domain I need to do some magic to find out what the base path is
-    $baseDirectory = dirname(__DIR__) . "/";
-    $basePath = str_replace($_SERVER["DOCUMENT_ROOT"], "", $baseDirectory);
-    $basePath = str_replace("\\", "/", $basePath);
+    // The following code will subtract a certain amount of directories from the requested path to get the base path
+    // The amount of directories is based on the difference between the base directory and the directory of the index
+    $baseDirectory = str_replace("\\", "/", dirname(__DIR__)) . "/";
+    $indexControllerDirectory = str_replace("\\", "/", dirname($_SERVER["SCRIPT_FILENAME"])) . "/";
+    $relativePathToIndex = substr($indexControllerDirectory, strlen($baseDirectory));
+    $relativePathToIndexParts = substr_count($relativePathToIndex, "/");
+    $scriptNameArray = array_filter(explode("/", str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"]))));
+    $basePathArray = $relativePathToIndexParts
+        ? array_slice($scriptNameArray, 0, -$relativePathToIndexParts)
+        : $scriptNameArray;
+    $basePath = "/" . implode("/", $basePathArray);
+
+    if ($basePath !== "/") {
+        $basePath .= "/";
+    }
 
     $_LANG = isset($_COOKIE["lang"]) ? $_COOKIE["lang"] : 1;
 
