@@ -8,7 +8,7 @@
     // The following code will subtract a certain amount of directories from the requested path to get the base path
     // The amount of directories is based on the difference between the base directory and the directory of the index
     $baseDirectory = str_replace("\\", "/", dirname(__DIR__)) . "/";
-    $indexControllerDirectory = str_replace("\\", "/", dirname($_SERVER["SCRIPT_FILENAME"])) . "/";
+    $indexControllerDirectory = str_replace("\\", "/", dirname(realpath($_SERVER["SCRIPT_FILENAME"]))) . "/";
     $relativePathToIndex = substr($indexControllerDirectory, strlen($baseDirectory));
     $relativePathToIndexParts = substr_count($relativePathToIndex, "/");
     $scriptNameArray = array_filter(explode("/", str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"]))));
