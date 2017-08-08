@@ -1,22 +1,16 @@
-<?php error_reporting(false);
-include("D:/website/toxic/sjablonen/constanten.php");
+<?php
+    $title1 = "Toxic - Ledenlijst aanpassen";
+    require("../../includes/pagestart.php");
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<h1>Ledenlijst Aanpassen</h1>
+<p style="color: red">
+    To be implemented... Or not.
+</p>
 
-<head>
-	<?php error_reporting(false);
-	include("D:/website/toxic/sjablonen/metadata.txt");
-	?>
-	<title>Toxic - Ledenlijst Aanpassen</title>
-</head>
-
-<body>
-
-<?php error_reporting(false);
-include("D:/website/toxic/sjablonen/menu.php");
-include("D:/website/toxic/sjablonen/accountmenu.php");
+<?php
+    require("../../includes/pageend.php");
+    exit();
 ?>
 
 <h1>Ledenlijst Aanpassen</h1>

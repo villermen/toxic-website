@@ -1,5 +1,5 @@
 <?php
-    $title = "Toxic - Eventplanner Aanpassen";
+    $title1 = "Toxic - Eventplanner Aanpassen";
     require("../../includes/pagestart.php");
 
     $permission = false;
