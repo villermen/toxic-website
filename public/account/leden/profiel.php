@@ -36,7 +36,7 @@
         </div>
 
         <?php if ($views_aan): ?>
-            <div class='profiel_p'>Aantal views: <?=$views?></div>
+            <p>Aantal views: <?=$views?></p>
         <?php endif;?>
     <?php else: ?>
         <h1>Profiel van <?=$gebruiker["naam"];?></h1>

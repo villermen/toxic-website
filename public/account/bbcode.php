@@ -5,9 +5,9 @@
 
 <h1>BB-Code</h1>
 
-<h2>Wat is bb-code?</h2>
+<h2>Wat is BB-code?</h2>
 <p>
-    Op sommige delen van de site kun je bb-code gebruiken om tekst die je intypt op te maken.<br />
+    Op sommige delen van de site kun je BB-code gebruiken om tekst die je intypt op te maken.<br />
     Je kan bijvoorbeeld een tekst vetgedrukt maken, maar bijvoorbeeld ook zorgen dat er een link van gemaakt word waar je op kan klikken.
 </p>
 

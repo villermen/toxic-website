@@ -2,18 +2,29 @@
 
 require_once("highscorefuncties.php");
 
+
+function profielPagina()
+{
+    ob_start();
+
+
+
+    return ob_get_clean();
+}
+
 /**
- * Replace HTML entities and expand special characters.
- *
  * @param string $string
+ * @param bool $lineBreaks
  * @return string
  */
-function htmlEncode($string)
+function htmlEncode($string, $lineBreaks = false)
 {
-    $string = htmlspecialchars($string, ENT_QUOTES, "UTF-8");
-    $string = str_replace("\t", "    ", $string);
-    $string = str_replace(" ", "&nbsp;", $string);
-    $string = str_replace("\r\n", "<br />", $string);
+    $string = trim($string);
+    $string = htmlspecialchars($string);
+
+    if (!$lineBreaks) {
+        $string = str_ireplace(["\r\n", "\n", "\r"], "<br />", $string);
+    }
 
     return $string;
 }
@@ -77,6 +88,8 @@ function bbGetTag($string, $bbcommand)
 function bbDecode($string, $naam)
 {
     global $xpTable;
+
+    $string = htmlEncode($string);
 
     $string = str_ireplace("[b]", "<b>", $string);
     $string = str_ireplace("[/b]", "</b>", $string);
@@ -159,9 +172,9 @@ function bbDecode($string, $naam)
         $array_tag = bbGetTag($string, "afbeelding");
 
         if (stripos($array_tag["content"], "/") !== false) {
-            $string = substr_replace($string, "<img alt='' src='" . $array_tag["content"] . "' />", $array_tag["position"], $array_tag["length"]);
+            $string = substr_replace($string, "<img src='" . $array_tag["content"] . "' />", $array_tag["position"], $array_tag["length"]);
         } else {
-            $string = substr_replace($string, "<img alt='' src='bestanden/" . str_replace(" ", "_", $naam) . "/" . $array_tag["content"] . "' />", $array_tag["position"], $array_tag["length"]);
+            $string = substr_replace($string, "<img src='bestanden/" . str_replace(" ", "_", $naam) . "/" . $array_tag["content"] . "' />", $array_tag["position"], $array_tag["length"]);
         }
     }
 
