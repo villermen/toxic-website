@@ -5,7 +5,7 @@
 
 <h1>Ledenlijst Aanpassen</h1>
 <p style="color: red">
-    To be implemented... Or not.
+    To be reimplemented... Or not.
 </p>
 
 <?php

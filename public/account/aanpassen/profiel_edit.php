@@ -50,9 +50,7 @@
 
         $urlnaam = str_ireplace(" ", "_", $login["naam"]);
         $muziekOpties = glob($baseDirectory . "account/leden/bestanden/$urlnaam/*.{mp3,wav,wma,ogg}", GLOB_BRACE);
-        $muziekOpties = array_map(function($muziekOptie) {
-            return basename($muziekOptie);
-        }, $muziekOpties);
+        $muziekOpties = array_map("basename", $muziekOpties);
 
         $views_aan = isset($_POST["views"]) ?: substr($login["views"], 0, 3) === "aan";
     }
